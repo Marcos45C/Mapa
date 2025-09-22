@@ -52,11 +52,9 @@ export const Principa = () => {
   return (
     <table className="table-auto border border-gray-300 w-full">
       <thead className="bg-gray-200">
-    
         <Encabezado sortConfig={sortConfig} onSort={ordenarPorColumna} />
       </thead>
       <tbody>
-      
         <Buscador expex={data} />
       </tbody>
     </table>
