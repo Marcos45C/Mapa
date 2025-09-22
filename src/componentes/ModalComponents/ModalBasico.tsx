@@ -1,54 +1,23 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import { useState } from 'react';
-
-
-// Tipado del estilo del modal
-const style= {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
-// Props del modal reutilizable
-interface ModalProps {
+interface ModalBasicoProps {
   title: string;
   content: string;
   buttonText?: string;
+  onClose: () => void;
 }
 
-export const ModalBasico = ({ title, content, buttonText = "Open modal" }: ModalProps) => {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
+export const ModalBasico = ({ title, content, buttonText = "Cerrar", onClose }: ModalBasicoProps) => {
   return (
-    <>
-      <Button onClick={handleOpen}> {buttonText}</Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-title"
-        aria-describedby="modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-title" variant="h6" component="h2">
-            {title}
-          </Typography>
-          <Typography id="modal-description" sx={{ mt: 2 }}>
-            {content}
-          </Typography>
-        </Box>
-      </Modal>
-    </>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-6 rounded shadow-lg max-w-md w-full">
+        <h2 className="text-lg font-bold mb-4">{title}</h2>
+        <p className="whitespace-pre-line mb-4">{content}</p>
+        <button
+          onClick={onClose}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          {buttonText}
+        </button>
+      </div>
+    </div>
   );
 };

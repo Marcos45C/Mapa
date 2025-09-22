@@ -1,8 +1,8 @@
 export interface ExpedienteInterfaz  {
-    fecha:          Date;
-    estado:         Estado;
+    fecha:          Date | string;
+    estado:         Estado | string;
     vehiculos:      Vehiculo[];
-    clase_evento:   ClaseEvento | null;
+    clase_evento:   ClaseEvento | string | null;
     lugar:          string;
     nro_expediente: string;
     latitud:        null | string;
@@ -32,13 +32,13 @@ export enum Estado {
 }
 
 export interface Vehiculo {
-    tipo:                Tipo;
-    suceso:              Suceso;
+    tipo:                Tipo | string;
+    suceso:              Suceso | string;
     marca:               string;
     modelo:              string;
     dominio:             string;
     investigacion:       boolean;
-    categoria_servicios: CategoriaServicios | null;
+    categoria_servicios: CategoriaServicios | string  | null  ;
 }
 
 export enum CategoriaServicios {
