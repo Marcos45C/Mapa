@@ -3,6 +3,7 @@ import { Buscador } from "./componentes/Buscador";
 import { Encabezado } from "./componentes/Encabezado";
 import type { ExpedienteInterfaz } from "./api/interface";
 import { Api1 } from "./api/datos";
+// import {geojson} from "./api/convert-to-geojson";
 
 export const Principa = () => {
   // estado principal con los datos de la tabla
@@ -60,3 +61,5 @@ export const Principa = () => {
     </table>
   );
 };
+
+

@@ -33,6 +33,7 @@ export const Api1:ExpedienteInterfaz[]=[
 
 
 
+
   {
     "fecha": "2025-01-28",
     "estado": "En Curso",
@@ -63,6 +64,8 @@ export const Api1:ExpedienteInterfaz[]=[
     "longitud": "-59.887963"
   },
 
+
+  
 
   {
     "fecha": "2025-01-27",
