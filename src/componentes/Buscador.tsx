@@ -1,11 +1,25 @@
 import type { ExpedienteInterfaz } from "../api/interface";
+import { ModalBasico } from "./ModalComponents/ModalBasico"; // versión reutilizable
+import { useState } from "react";
 
 interface Props {
   expex: ExpedienteInterfaz[];
-  onClick: (expediente: ExpedienteInterfaz) => void;
 }
 
-export const Buscador = ({ expex, onClick }: Props) => {
+export const Buscador = ({ expex }: Props) => {
+  // Estado para controlar qué modal mostrar
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<{title: string; content: string} | null>(null);
+
+  const handleClick = (expediente: ExpedienteInterfaz) => {
+    // Cada expediente puede tener contenido distinto
+    setModalContent({
+      title: `Expediente ${expediente.nro_expediente}`,
+      content: `Estado: ${expediente.estado}\nLugar: ${expediente.lugar}`
+    });
+    setModalOpen(true);
+  };
+
   return (
     <>
       {expex.map((expediente) => (
@@ -22,7 +36,7 @@ export const Buscador = ({ expex, onClick }: Props) => {
           <td className="px-4 py-2">{expediente.nro_expediente.split("-").slice(0, 3).join("-")}</td>
           <td className="px-4 py-2 text-center">
             <button
-              onClick={() => onClick(expediente)}
+              onClick={() => handleClick(expediente)}
               className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600"
             >
               Saber Más...
@@ -30,6 +44,15 @@ export const Buscador = ({ expex, onClick }: Props) => {
           </td>
         </tr>
       ))}
+
+      {/* Renderizamos el modal solo si modalContent no es null */}
+      {modalContent && (
+        <ModalBasico
+          title={modalContent.title}
+          content={modalContent.content}
+          buttonText="Cerrar" // opcional, no afecta
+        />
+      )}
     </>
   );
 };

@@ -1617,7 +1617,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "13180",
         "dominio": "JCT962",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       },
       {
         "tipo": "Motocicleta",
@@ -1869,7 +1869,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "Cargo 1723",
         "dominio": "AD514KU",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       },
       {
         "tipo": "Tractor",
@@ -2569,7 +2569,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "categoria_servicios": "No Aplica"
       }
     ],
-    "clase_evento": "",
+    "clase_evento": null,
     "lugar": "Localidad San Genaro, San Jer\u00f3nimo (Santa Fe)",
     "nro_expediente": "EX-2023-107825500- -APN-DNISAU#JST",
     "latitud": "-32.894933",
@@ -2805,7 +2805,7 @@ export const Api1:ExpedienteInterfaz[]=[
     "fecha": "2023-08-14",
     "estado": "Finalizada",
     "vehiculos": [],
-    "clase_evento": "",
+    "clase_evento": null,
     "lugar": "Localidad Ingeniero Maschwitz (Buenos Aires)",
     "nro_expediente": "EX-2023-94873206- -APN-DNISAU#JST",
     "latitud": "-34.388824",
@@ -3199,7 +3199,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "AXOR 2036S",
         "dominio": "AC566FB",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       },
       {
         "tipo": "Sedan, 4 Puertas",
@@ -4113,7 +4113,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "Paradiso 1800DD",
         "dominio": "GUC205",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       }
     ],
     "clase_evento": "Colisi\u00f3n m\u00faltiple",
@@ -4142,7 +4142,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "Expert 1.6 HDI Premium",
         "dominio": "No especificado",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       }
     ],
     "clase_evento": "Colisi\u00f3n por alcance",
@@ -4260,7 +4260,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "K440 B6X2 Paradiso G7 1800",
         "dominio": "AF149IL",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       }
     ],
     "clase_evento": "Vuelco",
@@ -4309,7 +4309,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "A DETERMINAR",
         "dominio": "A determinar",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       },
       {
         "tipo": "\u00d3mnibus piso normal",
@@ -4318,7 +4318,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "MT 15.0",
         "dominio": "AC167MN",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       }
     ],
     "clase_evento": "Colisi\u00f3n frontal",
@@ -4445,7 +4445,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "modelo": "A DETERMINAR",
         "dominio": "A determinar",
         "investigacion": true,
-        "categoria_servicios": ""
+        "categoria_servicios": null
       }
     ],
     "clase_evento": "Colisi\u00f3n m\u00faltiple",
@@ -4810,7 +4810,7 @@ export const Api1:ExpedienteInterfaz[]=[
         "categoria_servicios": "Pasajeros"
       }
     ],
-    "clase_evento": "",
+    "clase_evento": null,
     "lugar": "Localidad San Martin (Buenos Aires)",
     "nro_expediente": "EX-2022-77884558- -APN-DNISAU#JST",
     "latitud": null,
